@@ -124,3 +124,102 @@
 **Expected result:** The name and/or description of the image is the same since they are copies.
 
 **Actual result:** Copies differ in name and/or description, some lack descriptions.
+
+
+# 3. Authentication / Registration / Password Recovery
+
+## Bug 8: No password requirements
+**Description:** No information about password requirements on registration page; minimum or maximum number of characters, type of characters.
+
+**Severity:** Minor
+
+**Priority:** High
+
+**Steps to reproduce:**
+
+1.	Hover over header icon in the upper left corner.
+
+2.	Click on “Menu”.
+
+3.	Click on “Register”.
+
+**Expected result:** Available information about password requirements such as min. or max. characters, type of characters (symbols, uppercase or lowercase letter).
+
+**Actual result:** No information about password requirements, only error message appears until there are enough characters in both Password and Confirm Password fields.
+
+## Bug 9: Error messages do not disappear
+**Description:** Error messages do not disappear after deleting input in Password and/or Confirm Password field.
+
+**Severity:** Minor
+
+**Priority:** Medium
+
+**Steps to reproduce:**
+
+1.	Hover over header icon in the upper left corner.
+
+2.	Click on “Menu”.
+
+3.	Click on “Register”.
+
+4.	Type in a 6 character password in the Password field.
+
+5.	Type in the same to the Confirm Password field.
+
+6.	Delete some characters in both fields.
+
+7.	Then delete everything from both fields.
+
+**Expected result:** Error messages should disappear when deleting all input.
+
+**Actual result:** All error messages are still visible after deleting all input.
+
+## Bug 10: No error message when incomplete email used for registration
+**Description:** When entering an incomplete email address domain, registration fails without any error messages.
+
+**Severity:** Major
+
+**Priority:** High
+
+**Steps to reproduce:**
+
+1.	Open Registration page.
+
+2.	Enter an email address with an invalid email domain.
+
+3.	Enter Username
+
+4.	Enter a password of minimum 6 characters, all lowercase, only letters.
+
+5.	Re-enter password to confirm.
+
+6.	Click on “Register”.
+
+**Expected result:** Error message for invalid email.
+
+**Actual result:** Registration fails without any messages.
+
+## Bug 11: Password recovery email not working
+**Description:** After receiving an email for password recovery, the link from the email to set up a new password shows an error.
+
+**Severity:** Major
+
+**Priority:** High
+
+**Steps to reproduce:**
+
+1.	Click on “Login”.
+
+2.	Click on “Forgot Your Password? Recover Your Password Here!”
+
+3.	Enter valid email address.
+
+4.	Open email inbox.
+
+5.	Open email “Password Recovery”.
+
+6.	Click on “Set new password”.
+
+**Expected result:** Redirected to app for password reset.
+
+**Actual result:** Error occurs.
