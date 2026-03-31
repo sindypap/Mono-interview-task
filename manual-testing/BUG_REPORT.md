@@ -223,3 +223,89 @@
 **Expected result:** Redirected to app for password reset.
 
 **Actual result:** Error occurs.
+
+
+# 4. Album / Profile / Upload Management
+
+## Bug 12: Error when viewing every other image in album
+**Description:** When viewing first and every other image in the album, error 404: page missing appears. When opening to view 2., 4, and 6. image, error does not appear.
+
+**Severity:** Major
+
+**Priority:** High
+
+**Steps to reproduce:**
+
+1.	Log in.
+
+2.	Open profile.
+
+3.	Create an album.
+
+4.	Add more than 2 images.
+
+5.	Click to open second image and every other (2nd, 4th, 6th).
+
+6.	Click to open images in odd-numbered positions (1st, 3rd, 5th).
+
+**Expected result:** Able to view all images from album.
+
+**Actual result:** Error 404: page missing appears when viewing first image added and every other image in odd-numbered positions, not able to go back to Album page. Second image and every other even-numbered position is viewable (2nd, 4th, 6th).
+
+## Bug 13: Not able to add already existing name to image in album
+**Description:** Not possible to add an already existing name to an image in album.
+
+**Severity:** Major
+
+**Priority:** Medium
+
+**Steps to reproduce:**
+
+1.	Log in.
+
+2.	Open profile.
+
+3.	Create an album.
+
+4.	Add an image with one name.
+
+5.	Add the same image with the same name.
+
+6.	Add a different image with the same name.
+
+**Expected result:** Same images having same names for search functionality.
+
+**Actual result:** One name added to an image cannot repeat, resulting in copies of same images with different names, not able use search option efficiently.
+
+## Bug 14: Error message for taken image names inconsistent.
+**Description:** Error message “Name taken, please choose another. “ not valid for every case. Inconsistent when using taken name from a different user.
+
+**Severity:** Major
+
+**Priority:** High
+
+**Steps to reproduce:**
+
+1.	Log in.
+
+2.	Open profile.
+
+3.	Open album.
+
+4.	Add new image to an album.
+
+5.	Open main gallery.
+
+6.	Open image from different user.
+
+7.	Copy name of image.
+
+8.	Open same album in profile.
+
+9.	Add same image.
+
+10.	Paste name from different user.
+
+**Expected result:** Error message “Name taken, please choose another. “ should appear.
+
+**Actual result:** App does not allow same names within user’s album, but allows same name of image uploaded by a different user.
