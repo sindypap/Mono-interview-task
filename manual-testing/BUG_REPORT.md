@@ -48,3 +48,79 @@
 
 **Actual result:** No option available.
 
+
+# 2. Gallery / Image Display
+
+## Bug 4: Gallery needs to be reopened after viewing an image
+**Description:** After opening an image, going back to the gallery makes the images disappear. To view the images, the main button needs to be clicked again.
+
+**Severity:** Minor
+
+**Priority:** Medium
+
+**Steps to reproduce:**
+
+1.	Open website.
+
+2.	Click on button under tagline.
+
+3.	Click on an image.
+
+4.	Go back a page to main menu or click on the X in the upper right corner.
+
+**Expected result:** Continue browsing where it was left off.
+
+**Actual result:** Gallery closes, button needs to be clicked again.
+
+## Bug 5: Multiple of same picture
+**Description:** Images uploaded to albums also appear in the main gallery, causing duplicate entries with potentially different names and/or descriptions.
+
+**Severity:** Minor
+
+**Priority:** Medium
+
+**Steps to reproduce:**
+
+1.	Open website.
+
+2.	Click on button to open gallery.
+
+**Expected result:** No repeating images, one of each image.
+
+**Actual result:** Some images have 1 or more copies.
+
+## Bug 6: Images cropped in preview
+**Description:** Images are cropped in gallery preview.
+
+**Severity:** Minor
+
+**Priority:** Medium
+
+**Steps to reproduce:**
+
+1.	Open website.
+
+2.	Click on button to open gallery.
+
+**Expected result:** Entire image visible in preview
+
+**Actual result:** Images are cropped.
+
+## Bug 7: Copies differ in name and/or description
+**Description:** Copies of same images have different names and/or descriptions, and some do not even have descriptions.
+
+**Severity:** Low
+
+**Priority:** Low
+
+**Steps to reproduce:**
+
+1.	Open gallery.
+
+2.	Open any image that has copies.
+
+3.	Open another copy of the same image.
+
+**Expected result:** The name and/or description of the image is the same since they are copies.
+
+**Actual result:** Copies differ in name and/or description, some lack descriptions.
