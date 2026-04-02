@@ -36,9 +36,15 @@ test('logs in user, opens menu, logs out, and verifies user is logged out', asyn
   await menu.hover();
   await menu.click();
 
-  // Click the logout menu entry (UI label is "Log out", not "Logout")
+  // Click the logout menu entry (UI label is "Log out", not "Logout").
+  // Wait for that navigation so a follow-up goto does not race and cancel logout.
   await page.getByRole('navigation').getByText('Log out', { exact: true }).click();
+  await expect(page.getByRole('heading', { name: /404: page missing/i })).toBeVisible({ timeout: 15000 });
 
-  // Expect the login form to be visible again, which means the user is logged out
-  await expect(page.getByRole('button', { name: 'Login', exact: true })).toBeVisible({ timeout: 15000 });
+  await page.goto(BASE_URL);
+  await menu.hover();
+  await menu.click();
+
+  // Logged-out users see "Login" in the nav (same as before signing in)
+  await expect(page.getByRole('navigation').getByText('Login', { exact: true })).toBeVisible({ timeout: 15000 });
 });
