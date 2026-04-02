@@ -1,0 +1,26 @@
+{
+  "name": "mono-interview-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:gallery": "playwright test test/gallery.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sindypap/Mono-interview-task.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sindypap/Mono-interview-task/issues"
+  },
+  "homepage": "https://github.com/sindypap/Mono-interview-task#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.5.0"
+  }
+}
